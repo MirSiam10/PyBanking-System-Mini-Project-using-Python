@@ -1,5 +1,8 @@
 # 🏦 PyBanking System
 
+<img width="499" height="305" alt="pybanking_UML" src="https://github.com/user-attachments/assets/e58a7a15-1cb4-4bff-81e4-c925828d26d3" />
+
+
 ## Overview
 
 **PyBanking System** is a learning-focused banking simulation project built in Python to strengthen my understanding of **Object-Oriented Programming (OOP)** and modern Python development practices.
