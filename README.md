@@ -49,9 +49,13 @@ This project helped me move beyond basic Python syntax and apply several importa
 
 Bank
 ├── Account (Abstract Base Class)
+
 │ ├── SavingsAccount
+
 │ ├── CheckingAccount
+
 │ └── FixedDepositAccount
+
 │
 └── Transaction Records
 
