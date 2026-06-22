@@ -9,7 +9,7 @@
 
 Rather than creating a simple CRUD application, I designed this project to explore how real-world systems can be modeled using classes, inheritance hierarchies, abstract base classes, encapsulation, and polymorphism.
 
-Through the implementation of multiple account types, transaction management, money transfers, interest calculations, and bank-level operations, I gained practical experience in writing maintainable, scalable, and object-oriented code.
+Through implementing multiple account types, transaction management, money transfers, interest calculations, and bank-level operations, I gained practical experience in writing maintainable, scalable, and object-oriented code.
 
 ---
 
@@ -45,149 +45,15 @@ This project helped me move beyond basic Python syntax and apply several importa
 * Account Lifecycle Management
 * Reusable and Extensible Architecture
 
----
+🔗 Relationship Between Components
 
-## System Architecture
-
-### Transaction
-
-An immutable transaction record implemented using a frozen dataclass.
-
-Features:
-
-* Transaction type tracking
-* Amount recording
-* Automatic timestamp generation
-* Immutable transaction history
-
-### Account (Abstract Base Class)
-
-The foundation of all account types.
-
-Responsibilities:
-
-* Owner management
-* Balance management
-* Transaction history
-* Deposit operations
-* Statement generation
-* Unique account numbering
-
-Every account type must implement its own withdrawal logic.
-
----
-
-## Account Types
-
-### SavingsAccount
-
-A traditional savings account.
-
-Features:
-
-* Deposits and withdrawals
-* No overdraft support
-* Interest calculation
-* Interest application history
-
-### CheckingAccount
-
-A checking account with overdraft support.
-
-Features:
-
-* Withdraw beyond available balance
-* Configurable overdraft limit
-* Balance protection rules
-
-### FixedDepositAccount
-
-A fixed-term investment account.
-
-Features:
-
-* Monthly interest accumulation
-* Maturity period enforcement
-* Withdrawal restrictions before maturity
-* Account maturity tracking
-
----
-
-## Bank Management System
-
-The `Bank` class acts as the central controller of the system.
-
-Capabilities:
-
-* Open new accounts
-* Search accounts
-* Transfer money between accounts
-* Calculate total bank assets
-* Identify the richest customer
-* Generate complete bank summaries
-
----
-
-## Key OOP Concepts Demonstrated
-
-### Abstraction
-
-The `Account` abstract base class defines common banking behaviors while forcing child classes to implement their own withdrawal logic.
-
-### Encapsulation
-
-Sensitive data such as balances and account information are protected and accessed through properties and controlled methods.
-
-### Inheritance
-
-All account types inherit shared functionality from the `Account` class.
-
-### Polymorphism
-
-Each account type implements withdrawals differently while exposing the same interface.
-
-### Composition
-
-The banking system stores and manages transaction objects inside accounts.
-
----
-
-## Example Features
-
-✔ Deposit Funds
-
-✔ Withdraw Funds
-
-✔ Transfer Money Between Accounts
-
-✔ Interest Calculation
-
-✔ Fixed Deposit Maturity Handling
-
-✔ Transaction History Tracking
-
-✔ Richest Customer Detection
-
-✔ Bank Asset Calculation
-
-✔ Account Statements
-
-✔ Custom String Representations
-
-✔ Equality Comparison Between Accounts
-
----
-
-## Sample Output
-
-* Open multiple account types
-* Perform deposits and withdrawals
-* Apply interest
-* Execute transfers
-* Generate account statements
-* View complete bank summary
-
----
+Bank
+├── Account (Abstract Base Class)
+│ ├── SavingsAccount
+│ ├── CheckingAccount
+│ └── FixedDepositAccount
+│
+└── Transaction Records
 
 ## Why I Built This Project
 
